@@ -1,0 +1,30 @@
+/* ----- GLOBAL STYLES -----*/
+body {
+    font-size: 62.5%;
+    font-family: 'VT323', monospace;
+	background-color: rgb(214, 238, 194);
+    background-image: linear-gradient(transparent 15%, 
+									rgba(62, 68, 13, 0.03) 25%, 
+									transparent 35%,
+									transparent 65%, 
+									rgba(62, 68, 13, 0.03) 75%, 
+									transparent 85%),
+					  linear-gradient(to right,
+                                    transparent 15%, 
+									rgba(62, 68, 13, 0.03) 25%, 
+									transparent 35%,
+									transparent 65%, 
+									rgba(62, 68, 13, 0.03) 75%, 
+									transparent 85%);
+    background-size: 50px 50px;
+}
+.pokedexWrapper {
+	display: flex;
+	max-width: 1600px;
+	justify-content: flex-end;
+}
+
+/* ----- TRANSITIONS FOR COLORS CHANGNING WITH JS -----*/
+.searchBox, .pokemonListItem, body {
+	transition: background-color 0.3s ease-out;
+}

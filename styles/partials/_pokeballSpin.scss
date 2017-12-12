@@ -1,0 +1,38 @@
+/* ----- ANIMATED POKEBALL -----*/
+.pokeballSpinner {
+    width: 260px;
+    height: 260px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.pokeballTop, .pokeballMiddle, .pokeballBottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.pokeballTop {
+    animation: topSpin 2.4s infinite;
+}
+.pokeballBottom {
+    animation: bottomSpin 2.3s 1s infinite;
+}
+@keyframes topSpin {
+    0% {
+        transform: rotate3d(0,1,0,0deg);
+    }
+    100% {
+        transform: rotate3d(0,1,0,180deg);
+    }
+}
+@keyframes bottomSpin {
+    0% {
+        transform: rotate3d(0,1,0,180deg);
+    }
+    100% {
+        transform: rotate3d(0,1,0,0deg);
+    }
+}

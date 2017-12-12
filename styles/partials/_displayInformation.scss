@@ -1,0 +1,188 @@
+$pokemonBackground: rgba(245,245,245,1);
+
+@mixin borders($color) {
+    border: 15px solid $color;
+    background-color: $pokemonBackground;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5)
+}
+
+/* ----- DISPLAY INFORMATION SECTION -----*/
+.pokemonDisplay {
+    width: 70%;
+    position: relative;
+    min-height: 100vh;
+}
+.imageAndButtonsWrapper {
+    width: 40%;
+    position: absolute;
+    top: 7%;
+    right: 5%;
+}
+.pokemonImageWrapper {
+    @include borders(green);
+    width: 100%;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/pokeballFull20.png');
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pokemonImage {
+    transform: scale(1.3);
+    width: 100%;
+}
+.pokemonName {
+    @include borders(green);
+    position: relative;
+    top: 7.1%;
+    left: 5%;
+    width: 71%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 4rem;
+    border-radius: 20px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+.pokemonNumber {
+    @include borders(green);
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    z-index: 100;
+    top: 1%;
+    left: 10%;
+    margin: 0;
+}
+.pokemonDescription, .pokemonMatchups {
+    @include borders(green);
+    position: relative;
+    left: 5%;
+    border-radius: 20px;
+    width: 45%;
+    font-size: 1.7rem;
+    padding: 20px;
+    margin: 0;
+    margin-top: 100px;
+    transition: all 1s ease-out;
+    margin-bottom: 50px;
+}
+.hideSection {
+    display: none;
+}
+
+/* ----- INFORMATION ENTRY -----*/
+.flavorText, .pokemonHeight, .pokemonWeight {
+    margin: 0;
+    padding: 0;
+}
+.pokemonHeight, .pokemonWeight {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.pokemonHeight h4, .pokemonWeight h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.pokemonHeight p, .pokemonWeight p {
+    margin: 0;
+    padding: 0;
+}
+.pokemonHeight {
+    float: left;
+}
+.pokemonWeight {
+    float: right;
+}
+
+/* ----- TYPE MATCHUPS ENTRY -----*/
+.pokemonMatchups {
+    color: white;
+    text-shadow: 0 0 3px black;
+    text-transform: uppercase;
+    text-align: center;
+}
+.pokemonType {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.strongMatchups, .weakMatchups {
+    width: calc(50% - 2.5px);
+}
+.strongMatchups, {
+    float: left;
+}
+.weakMatchups {
+    float: right;
+}
+.strongMatchupList, .weakMatchupList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.typeSubtitle, .typeTitle {
+    color: black;
+    text-shadow: 0 0 0 transparent;
+    margin: 0;
+}
+.typeTitle {
+    margin-bottom: 5px;
+}
+.matchupListItem {
+    padding: 7px;
+    margin: 5px 0;
+}
+
+/* ----- EVOLUTION ENTRY -----*/
+/* ----- ...coming soon... -----*/
+
+/* ----- BUTTONS -----*/
+.displayButtons {
+    display: flex;
+    list-style-type: none;
+    color: white;
+    text-shadow: 0 0 3px black;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-top: 25px;
+}
+.displayButtonItem {
+    padding: 7px;
+    margin: 5px 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.displayButtonItem:last-child {
+    margin-right: 0;
+}
+
+
+/* ----- BACKGROUND GRADIENTS -----*/
+.displayVignette {
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    background-image: linear-gradient(-45deg, black, white);
+}
